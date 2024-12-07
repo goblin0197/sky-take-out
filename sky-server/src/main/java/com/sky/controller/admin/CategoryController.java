@@ -77,7 +77,7 @@ public class CategoryController {
 
     @DeleteMapping
     @ApiOperation("删除分类")
-    public Result delete(@RequestBody Long id){
+    public Result delete(Long id){
         log.info("删除分类，id:{}",id);
         categoryService.deleteById(id);
         return Result.success() ;
