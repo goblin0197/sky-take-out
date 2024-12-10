@@ -28,7 +28,7 @@ public interface DishService {
      * 修改菜品信息
      * @param dishDTO
      */
-    void update(DishDTO dishDTO);
+    void updateWithFlavor(DishDTO dishDTO);
 
     /**
      * 根据id查询菜品信息

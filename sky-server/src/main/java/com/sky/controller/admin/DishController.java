@@ -99,7 +99,7 @@ public class DishController {
     @ApiOperation("修改菜品信息")
     public Result update(@RequestBody DishDTO dishDTO){
         log.info("修改菜品信息{}",dishDTO);
-        dishService.update(dishDTO);
+        dishService.updateWithFlavor(dishDTO);
         return Result.success();
     }
 
