@@ -104,10 +104,10 @@ public class DishController {
     }
 
     @GetMapping("/list")
-    @ApiOperation("根据类型查询菜品")
-    public Result<List<Dish>> list(Integer type){
-        log.info("根据类型查询菜品，type:{}",type);
-        List<Dish> dishList = dishService.list(type);
+    @ApiOperation("根据分类id查询菜品")
+    public Result<List<Dish>> list(Integer categoryId){
+        log.info("根据分类id查询菜品，categoryId:{}",categoryId);
+        List<Dish> dishList = dishService.list(categoryId);
         return Result.success(dishList);
     }
 }

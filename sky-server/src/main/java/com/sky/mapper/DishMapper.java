@@ -24,7 +24,12 @@ public interface DishMapper {
     @Select("select count(id) from dish where category_id = #{categoryId}")
     Integer countByCategoryId(Long categoryId);
 
-    List<Dish> list(Integer type);
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    List<Dish> list(Integer categoryId);
 
     /**
      * 根据id查询菜品
@@ -34,12 +39,6 @@ public interface DishMapper {
     @Select("select * from dish where id = #{id}")
     Dish getById(Long id);
 
-    /**
-     * 根据id查询菜品及其口味
-     * @param id
-     * @return
-     */
-    DishVO getByIdWithFlavor(Long id);
 
     @AutoFill(value = OperationType.UPDATE)
     void update(Dish dish);

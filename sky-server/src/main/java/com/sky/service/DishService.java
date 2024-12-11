@@ -39,10 +39,10 @@ public interface DishService {
 
     /**
      * 根据type查询菜品列表
-     * @param type
+     * @param categoryId
      * @return
      */
-    List<Dish> list(Integer type);
+    List<Dish> list(Integer categoryId);
 
     /**
      * 新增菜品

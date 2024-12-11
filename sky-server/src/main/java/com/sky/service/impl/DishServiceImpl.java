@@ -97,15 +97,18 @@ public class DishServiceImpl implements DishService {
 
     /**
      * 根据类型获取菜品列表
-     * @param type
+     * @param categoryId
      * @return
      */
-    public List<Dish> list(Integer type) {
-        List<Dish> dishList = dishMapper.list(type);
+    public List<Dish> list(Integer categoryId) {
+        List<Dish> dishList = dishMapper.list(categoryId);
         return dishList;
     }
 
-    @Override
+    /**
+     * 新增菜品
+     * @param dishDTO
+     */
     public void saveWithFlavor(DishDTO dishDTO) {
         Dish dish = new Dish();
         BeanUtils.copyProperties(dishDTO , dish);
