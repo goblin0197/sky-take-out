@@ -39,10 +39,10 @@ public interface DishService {
 
     /**
      * 根据type查询菜品列表
-     * @param categoryId
+     * @param dish
      * @return
      */
-    List<Dish> list(Integer categoryId);
+    List<Dish> list(Dish dish);
 
     /**
      * 新增菜品
@@ -51,4 +51,11 @@ public interface DishService {
     void saveWithFlavor(DishDTO dishDTO);
 
     void deleteBatch(List<Long> ids);
+
+    /**
+     * 条件查询菜品和口味
+     * @param dish
+     * @return
+     */
+    List<DishVO> listWithFlavor(Dish dish);
 }
