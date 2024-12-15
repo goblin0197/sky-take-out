@@ -37,13 +37,13 @@
         select d.* , c.name as categoryName from dish d left outer join category c on d.category_id = c.id
         <where>
             <if test="name != null">
-                name like concat('%',#{name},'%')
+                and name like concat('%',#{name},'%')
             </if>
             <if test="categoryId != null">
-                category_id = #{categoryId}
+                and category_id = #{categoryId}
             </if>
             <if test="status != null ">
-                status = #{status}
+                and status = #{status}
             </if>
         </where>
         order by d.create_time desc
@@ -53,13 +53,13 @@
         select * from dish
         <where>
             <if test="name != null">
-                name like concat('%',#{name},'%')
+                and name like concat('%',#{name},'%')
             </if>
             <if test="categoryId != null">
-                category_id = #{categoryId}
+                and category_id = #{categoryId}
             </if>
             <if test="status != null ">
-                status = #{status}
+                and status = #{status}
             </if>
         </where>
         order by create_time desc

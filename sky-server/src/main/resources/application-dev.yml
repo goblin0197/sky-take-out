@@ -10,7 +10,8 @@ sky:
     endpoint: xxxx
     access-key-id: xxxx
     access-key-secret: xxxx
-    bucket-name: ##sky-take-out  redis:
+    bucket-name: ##sky-take-out
+  redis:
     host: localhost
     port: 6379
     password:
