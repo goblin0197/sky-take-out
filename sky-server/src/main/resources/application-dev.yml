@@ -19,3 +19,7 @@ sky:
   wechat:
     appid: xxxx
     secret: xxxx
+  shop:
+    address: xx
+  baidu:
+    ak: xx
