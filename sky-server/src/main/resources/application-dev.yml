@@ -23,3 +23,5 @@ sky:
     address: xx
   baidu:
     ak: xx
+  file:
+    dataTemplate: "运营数据报表模板.xlsx"
